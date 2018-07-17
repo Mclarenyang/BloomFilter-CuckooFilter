@@ -1,0 +1,15 @@
+PODS:
+  - CryptoSwift (0.7.2)
+  - Surge (2.0.0)
+
+DEPENDENCIES:
+  - CryptoSwift (~> 0.7.1)
+  - Surge (~> 2.0.0)
+
+SPEC CHECKSUMS:
+  CryptoSwift: cd2158be2bf639aabc63ec804707c7137c90157c
+  Surge: 1f0286bc5f0fe4283f3455479895bf85c7ef7760
+
+PODFILE CHECKSUM: 0d94a5b1f8fdd6c513da44b1129f9278e755487e
+
+COCOAPODS: 1.4.0

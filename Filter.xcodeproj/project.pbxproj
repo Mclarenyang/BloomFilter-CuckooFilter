@@ -7,14 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		432488D120FDBD06001E9216 /* CuckooFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432488D020FDBD06001E9216 /* CuckooFilter.swift */; };
+		43680C5420FCCA0B00CB1F62 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43680C5320FCCA0B00CB1F62 /* CryptoSwift.framework */; };
+		43680C5620FCCA0B00CB1F62 /* Surge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43680C5520FCCA0B00CB1F62 /* Surge.framework */; };
 		43BE9ED320FC980A007C117C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BE9ED220FC980A007C117C /* AppDelegate.swift */; };
 		43BE9ED520FC980A007C117C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BE9ED420FC980A007C117C /* ViewController.swift */; };
 		43BE9ED820FC980A007C117C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43BE9ED620FC980A007C117C /* Main.storyboard */; };
 		43BE9EDA20FC980C007C117C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43BE9ED920FC980C007C117C /* Assets.xcassets */; };
 		43BE9EDD20FC980C007C117C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43BE9EDB20FC980C007C117C /* LaunchScreen.storyboard */; };
+		43BE9EE520FCB340007C117C /* BloomFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BE9EE420FCB340007C117C /* BloomFilter.swift */; };
+		E4AB17DFE85BB843F6429680 /* Pods_Filter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 903390E97E741DEBE39D5F72 /* Pods_Filter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		289097CD207A47CC3C29B379 /* Pods-Filter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Filter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Filter/Pods-Filter.release.xcconfig"; sourceTree = "<group>"; };
+		432488D020FDBD06001E9216 /* CuckooFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuckooFilter.swift; sourceTree = "<group>"; };
+		43680C5320FCCA0B00CB1F62 /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43680C5520FCCA0B00CB1F62 /* Surge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Surge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43BE9ECF20FC980A007C117C /* Filter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Filter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43BE9ED220FC980A007C117C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43BE9ED420FC980A007C117C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +31,9 @@
 		43BE9ED920FC980C007C117C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43BE9EDC20FC980C007C117C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43BE9EDE20FC980C007C117C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43BE9EE420FCB340007C117C /* BloomFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloomFilter.swift; sourceTree = "<group>"; };
+		903390E97E741DEBE39D5F72 /* Pods_Filter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Filter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99F71D9E5B2165BE9183A4CD /* Pods-Filter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Filter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Filter/Pods-Filter.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +41,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43680C5420FCCA0B00CB1F62 /* CryptoSwift.framework in Frameworks */,
+				43680C5620FCCA0B00CB1F62 /* Surge.framework in Frameworks */,
+				E4AB17DFE85BB843F6429680 /* Pods_Filter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +55,8 @@
 			children = (
 				43BE9ED120FC980A007C117C /* Filter */,
 				43BE9ED020FC980A007C117C /* Products */,
+				F22669A01FE24377A7DB53E7 /* Pods */,
+				9473168637E2B72AB6594E15 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +77,29 @@
 				43BE9ED920FC980C007C117C /* Assets.xcassets */,
 				43BE9EDB20FC980C007C117C /* LaunchScreen.storyboard */,
 				43BE9EDE20FC980C007C117C /* Info.plist */,
+				43BE9EE420FCB340007C117C /* BloomFilter.swift */,
+				432488D020FDBD06001E9216 /* CuckooFilter.swift */,
 			);
 			path = Filter;
+			sourceTree = "<group>";
+		};
+		9473168637E2B72AB6594E15 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43680C5320FCCA0B00CB1F62 /* CryptoSwift.framework */,
+				43680C5520FCCA0B00CB1F62 /* Surge.framework */,
+				903390E97E741DEBE39D5F72 /* Pods_Filter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F22669A01FE24377A7DB53E7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				99F71D9E5B2165BE9183A4CD /* Pods-Filter.debug.xcconfig */,
+				289097CD207A47CC3C29B379 /* Pods-Filter.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +109,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43BE9EE120FC980C007C117C /* Build configuration list for PBXNativeTarget "Filter" */;
 			buildPhases = (
+				A431E7A6C38B8D6E10F565F2 /* [CP] Check Pods Manifest.lock */,
 				43BE9ECB20FC980A007C117C /* Sources */,
 				43BE9ECC20FC980A007C117C /* Frameworks */,
 				43BE9ECD20FC980A007C117C /* Resources */,
+				022AA985D0FC888133977F4E /* [CP] Embed Pods Frameworks */,
+				3B3029D8595CADA40723CB87 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,13 +171,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		022AA985D0FC888133977F4E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Filter/Pods-Filter-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Surge/Surge.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Surge.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Filter/Pods-Filter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3B3029D8595CADA40723CB87 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Filter/Pods-Filter-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A431E7A6C38B8D6E10F565F2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Filter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		43BE9ECB20FC980A007C117C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43BE9EE520FCB340007C117C /* BloomFilter.swift in Sources */,
 				43BE9ED520FC980A007C117C /* ViewController.swift in Sources */,
 				43BE9ED320FC980A007C117C /* AppDelegate.swift in Sources */,
+				432488D120FDBD06001E9216 /* CuckooFilter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +318,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -272,17 +372,20 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 3.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		43BE9EE220FC980C007C117C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99F71D9E5B2165BE9183A4CD /* Pods-Filter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4T9R7Y2CG4;
 				INFOPLIST_FILE = Filter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,11 +399,13 @@
 		};
 		43BE9EE320FC980C007C117C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 289097CD207A47CC3C29B379 /* Pods-Filter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4T9R7Y2CG4;
 				INFOPLIST_FILE = Filter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
