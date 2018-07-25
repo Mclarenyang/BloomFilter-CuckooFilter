@@ -61,8 +61,8 @@ class BloomFilter {
     
     //judgeElement -> bool
     public func judgeElement(data: String) -> Bool{
-        let what = hash(data: data, hashNum: self.k!)
-        for hashValue in what {
+        let whatTheValue = hash(data: data, hashNum: self.k!)
+        for hashValue in whatTheValue {
             if self.bitSet![abs(hashValue % self.bitSetSize!)] == Bit.zero{
                 return false
             }

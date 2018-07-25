@@ -98,5 +98,4 @@ class CuckooFilter {
             fingerArray![searchResult.1] = ""
         }
     }
-    
 }
