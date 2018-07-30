@@ -12,17 +12,18 @@ import Surge
 
 class CuckooFilter {
     
-    var capacity:Int?
+    var capacity: Int!
     var threshold = 0
     //var maxThreshold = 0
     var fingerArray: [String]!
     
-    init(capacity:Int) {
+    init(capacity:Int){
         self.capacity = capacity
         fingerArray = [String](repeating: "", count: capacity)
     }
     
     //hash1 key -> hash1(key) = 存放的数组index
+    /*
     public func hash(data: String) -> Int{
         
         let hashValue = data.md5()
@@ -36,6 +37,14 @@ class CuckooFilter {
         let dataLocation = abs(hashResult % self.capacity!)
         return dataLocation
     }
+     */
+    
+    public func hash(data: String) -> Int{
+        let hashValue = data.hashValue
+        let location = abs(hashValue % self.capacity)
+        return location
+    }
+    
     //hashFP key -> fingerPrint
     public func fingerPointer(data: String) -> String{
         return data.sha1()
@@ -43,7 +52,7 @@ class CuckooFilter {
     
     //反向求hash2 hash1(fingerPrint) xor hash1(key)
     public func hash_append(fingerPoint: String, hash1: Int) -> Int{
-        let dataLocation = (hash(data: fingerPoint) ^ hash1) % self.capacity!
+        let dataLocation = (hash(data: fingerPoint) ^ hash1) % self.capacity
         return dataLocation
     }
     
@@ -59,19 +68,17 @@ class CuckooFilter {
     
     //addKickedElement
     public func addKickedElement(hash1:Int, fingerPoint:String){
+        self.threshold += 1
+        if self.threshold > 5{
+            print("数据溢出")
+            self.threshold = 0
+            return
+        }
         let appendHash = hash_append(fingerPoint: fingerPoint, hash1: hash1)
         if fingerArray![appendHash] != "" {
             addKickedElement(hash1: appendHash, fingerPoint: fingerArray![appendHash])
-            self.threshold += 1 //可以在这里判断扩容
-            if self.threshold > 7{
-                print("数据溢出")
-                return
-            }
-        }else{
-            self.threshold = 0
         }
         fingerArray![appendHash] = fingerPoint
-        
     }
     
     //judgeElement

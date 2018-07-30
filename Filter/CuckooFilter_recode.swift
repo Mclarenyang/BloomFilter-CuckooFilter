@@ -12,10 +12,11 @@ import Surge
 
 class CuckooFilter_recode: CuckooFilter {
     
-    var slotSize: Int!{
+    var slotSize: Int{
         didSet{
             if slotSize != 1{
                 //扩容
+                append(oldSlotSize: slotSize / 2)
             }
         }
     }
@@ -55,6 +56,12 @@ class CuckooFilter_recode: CuckooFilter {
     
     //addKickedElement 重写
     override func addKickedElement(hash1: Int, fingerPoint: String) {
+        self.threshold += 1
+        if self.threshold > 7{
+            print("数据溢出")
+            self.slotSize *= 2
+            return
+        }
         let appendHash = hash_append(fingerPoint: fingerPoint, hash1: hash1)
         for index in 0...slotSize - 1 {
             if fingerArray_recode[appendHash][index] == ""{
@@ -65,11 +72,6 @@ class CuckooFilter_recode: CuckooFilter {
             }
             if index == slotSize - 1 {
                 addKickedElement(hash1: appendHash, fingerPoint: fingerArray![appendHash])
-                self.threshold += 1
-                if self.threshold > 7{
-                    print("数据溢出")
-                    return
-                }
             }
         }
         return
@@ -102,6 +104,7 @@ class CuckooFilter_recode: CuckooFilter {
     
     //append
     func append(oldSlotSize: Int) {
+        print("--正在扩容--")
         var newFingerArray = Array<Array<String>>()
         for slot in fingerArray_recode{
             var newSlot = Array<String>()
@@ -115,6 +118,9 @@ class CuckooFilter_recode: CuckooFilter {
             newFingerArray.append(newSlot)
         }
         fingerArray_recode = newFingerArray
+        self.threshold = 0
+        print("当前横向容量：\(oldSlotSize) => \(slotSize)")
+        print("--扩容完毕--")
     }
 }
 
