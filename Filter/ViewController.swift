@@ -84,7 +84,7 @@ class ViewController: UIViewController {
             }
         }
         print("共有\(badNum)个重复数据")
-        print("最大踢出:\(cuckooFilter.maxThreshold)次")
+        //print("最大踢出:\(cuckooFilter.maxThreshold)次")
         print("----Finish----")
     
     }

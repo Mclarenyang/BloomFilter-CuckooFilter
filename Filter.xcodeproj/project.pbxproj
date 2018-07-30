@@ -10,6 +10,7 @@
 		432488D120FDBD06001E9216 /* CuckooFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432488D020FDBD06001E9216 /* CuckooFilter.swift */; };
 		43680C5420FCCA0B00CB1F62 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43680C5320FCCA0B00CB1F62 /* CryptoSwift.framework */; };
 		43680C5620FCCA0B00CB1F62 /* Surge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43680C5520FCCA0B00CB1F62 /* Surge.framework */; };
+		4382CC20210EE294008F6109 /* CuckooFilter_recode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4382CC1F210EE294008F6109 /* CuckooFilter_recode.swift */; };
 		43BE9ED320FC980A007C117C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BE9ED220FC980A007C117C /* AppDelegate.swift */; };
 		43BE9ED520FC980A007C117C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BE9ED420FC980A007C117C /* ViewController.swift */; };
 		43BE9ED820FC980A007C117C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43BE9ED620FC980A007C117C /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 		432488D020FDBD06001E9216 /* CuckooFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuckooFilter.swift; sourceTree = "<group>"; };
 		43680C5320FCCA0B00CB1F62 /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43680C5520FCCA0B00CB1F62 /* Surge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Surge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4382CC1F210EE294008F6109 /* CuckooFilter_recode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuckooFilter_recode.swift; sourceTree = "<group>"; };
 		43BE9ECF20FC980A007C117C /* Filter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Filter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43BE9ED220FC980A007C117C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43BE9ED420FC980A007C117C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				43BE9EDE20FC980C007C117C /* Info.plist */,
 				43BE9EE420FCB340007C117C /* BloomFilter.swift */,
 				432488D020FDBD06001E9216 /* CuckooFilter.swift */,
+				4382CC1F210EE294008F6109 /* CuckooFilter_recode.swift */,
 			);
 			path = Filter;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				43BE9ED520FC980A007C117C /* ViewController.swift in Sources */,
 				43BE9ED320FC980A007C117C /* AppDelegate.swift in Sources */,
 				432488D120FDBD06001E9216 /* CuckooFilter.swift in Sources */,
+				4382CC20210EE294008F6109 /* CuckooFilter_recode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

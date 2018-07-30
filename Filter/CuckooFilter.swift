@@ -10,15 +10,12 @@ import Foundation
 import CryptoSwift
 import Surge
 
-//需要一个扩容的枚举？
-
 class CuckooFilter {
     
-    let capacity:Int?
+    var capacity:Int?
     var threshold = 0
-    var maxThreshold = 0
-    var fingerArray:[String]?
-    
+    //var maxThreshold = 0
+    var fingerArray: [String]!
     
     init(capacity:Int) {
         self.capacity = capacity
@@ -36,7 +33,8 @@ class CuckooFilter {
             let indexBottom = hashValue.index(hashValue.startIndex, offsetBy: index * 4 + 8)
             hashResult += Int(hashValue[indexHead..<indexBottom], radix: 16)!
         }
-        return abs(hashResult % self.capacity!)
+        let dataLocation = abs(hashResult % self.capacity!)
+        return dataLocation
     }
     //hashFP key -> fingerPrint
     public func fingerPointer(data: String) -> String{
@@ -45,7 +43,8 @@ class CuckooFilter {
     
     //反向求hash2 hash1(fingerPrint) xor hash1(key)
     public func hash_append(fingerPoint: String, hash1: Int) -> Int{
-        return (hash(data: fingerPoint) ^ hash1) % self.capacity!
+        let dataLocation = (hash(data: fingerPoint) ^ hash1) % self.capacity!
+        return dataLocation
     }
     
     //addElement
@@ -69,7 +68,6 @@ class CuckooFilter {
                 return
             }
         }else{
-            if maxThreshold < threshold{maxThreshold = threshold}
             self.threshold = 0
         }
         fingerArray![appendHash] = fingerPoint
