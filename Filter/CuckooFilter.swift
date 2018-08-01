@@ -97,10 +97,12 @@ class CuckooFilter {
     }
     
     //delete
-    public func deleteElement(data: String){
+    public func deleteElement(data: String) -> Bool{
         let searchResult = judgeElement(data: data)
         if searchResult.0{
             fingerArray![searchResult.1] = ""
+        return true
         }
+        return false
     }
 }

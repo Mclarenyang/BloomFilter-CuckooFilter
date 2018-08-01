@@ -95,11 +95,13 @@ class CuckooFilter_recode: CuckooFilter {
         return (false,-1,-1)
     }
     //delete 重写
-    override func deleteElement(data: String) {
+    override func deleteElement(data: String) -> Bool {
         let searchResult = judgeElement_recode(data: data)
         if searchResult.0{
             fingerArray_recode[searchResult.1][searchResult.2] = ""
+            return true
         }
+        return false
     }
     
     //append
