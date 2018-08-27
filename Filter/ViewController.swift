@@ -106,8 +106,8 @@ class ViewController: UIViewController {
     
     func testCuckoo_recode() {
         
-        let cuckooFilter = CuckooFilter_recode(capacity: 10)
-        let randomNum = 10
+        let cuckooFilter = CuckooFilter_recode(capacity: 20)
+        let randomNum = 100
         
         //create data
         var elements = [String]()
