@@ -1,8 +1,7 @@
 # BloomFilter-CuckooFilter
-基于Swift语言写的BloomFIlter及CuckooFilter，两个过滤器的具体描述见[BloomFIlter & CuckooFilter学习笔记](https://www.jianshu.com/p/7f9d74b34e76)。
+基于 Swift 语言的 BloomFIlter 及 CuckooFilter，两个过滤器的具体描述见[BloomFIlter & CuckooFilter学习笔记](https://www.jianshu.com/p/7f9d74b34e76)。
 
 ## 性能测试数据
-----
 1.BloomFilter
 ```
 添加平均：2.18982219696045ms/element
